@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "satochi";
+  src: url(./assets/Hind/Fonts/OTF/Hind-Medium.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "supreme";
+  src: url("./assets/Hind/Fonts/OTF/Hind-Regular.otf") format("opentype");
+}
+
+p, a, li, span{
+  font-family: "supreme";
+}
+
+h1, h2{
+  font-family: "satochi";
+}
