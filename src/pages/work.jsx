@@ -11,11 +11,18 @@ export default function Work() {
             ]
         },
         {
-            title: "IM SAMA - Montage Vidéo / Ecriture / Voix - Chaine Personnelle",
+            title: "IM SAMA - Montage Vidéo / Ecriture / Voix / Miniamaker - Chaine Personnelle",
             videos: [
                 { id: "3nWXWj4TjTw", title: "Les HAKI, Fruits du demon" },
-                { id: "qYlHf-rOIIQ", title: "COMMENT fonctionne les EQUIPAGES dans ONE PIECE !" },
-                { id: "KZlrj-u3Tp8", title: "4 SCENES cultes dans ONE PIECE EXPLIQUER !" }
+                { id: "Q780TKpCPbs", title: "Les 10 MEILLEURS utilisateurs de HAKI DES ROIS de ONE PIECE" },
+                { id: "VQUS-Qr2slc", title: "5 techniques OUBLIÉ de luffy !" }
+            ]
+        },
+        {
+            title: "VFX - Effets Spéciaux / Houdini - Personnel",
+            videos: [
+                { id:"092-JulXG2E", title: "Houdini - Simulation boule de feu" },
+                { id: "kabquFpWlX0", title: "Houdini - Entrainement flamme" }
             ]
         }
     ];
