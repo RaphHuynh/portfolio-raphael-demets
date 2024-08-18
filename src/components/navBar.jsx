@@ -1,27 +1,38 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { FaHome, FaLaptop, FaBriefcase } from 'react-icons/fa';
 
-export default NavBar;
+export default function NavBar() {
+    const [isScrolled, setIsScrolled] = useState(false);
 
-function NavBar(){
-    const [textNav, setTextNav] = useState([
-        {id : "#Home", content : "Accueil"},
-        {id : "#Competence", content :"Competences"},
-        {id : "#Work", content :"Réalisations"},
-      ]);
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 10);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const navItems = [
+        { id: "#Home", content: "Accueil", icon: <FaHome /> },
+        { id: "#Competence", content: "Compétences", icon: <FaLaptop /> },
+        { id: "#Work", content: "Réalisations", icon: <FaBriefcase /> },
+    ];
 
     return (
-        <div>
-            <nav className="fixed w-full h-10 lg:h-20 z-10 px-10 lg:px-32 flex justify-between items-center bg-white">
-                    <div className='flex w-full md:w-auto items-baseline'>
-                        <span className='lg:text-2xl text-zinc-800 font-bold mr-14'>Raphaël Demets</span>
-                        {textNav.map((text) => (
-                            <a key={text.id} className="mr-2 lg:mr-4 lg:text-xl text-zinc-600 border-b-2 border-transparent hover:border-red-500 transition delay-75" href={text.id}>
-                                <span>{text.content}</span>
-                            </a>
-                        ))}
-                    </div>
-
-            </nav>
-        </div>
+        <nav className={`fixed w-full z-10 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-4' : 'bg-transparent py-4'}`}>
+            <div className="px-6 lg:px-32 flex justify-between items-center">
+                <span className='text-xl lg:text-2xl text-red-500 font-bold'>Raphaël Demets</span>
+                <div className='flex items-center space-x-6'>
+                    {navItems.map((item) => (
+                        <a key={item.id} 
+                           href={item.id}
+                           className="flex items-center text-zinc-600 hover:text-red-500 transition duration-300">
+                            {item.icon}
+                            <span className="ml-2 hidden md:inline">{item.content}</span>
+                        </a>
+                    ))}
+                </div>
+            </div>
+        </nav>
     );
 }
