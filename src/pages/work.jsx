@@ -49,8 +49,6 @@ export default function Work() {
                                 key={video.id} 
                                 className="bg-white rounded-lg shadow-md overflow-hidden hover:cursor-pointer"
                                 whileHover={{ scale: 1.05 }}
-                                transition={{ type: "tween", duration: 0.01 }}
-                                data-aos="zoom-in"
                             >
                                 <iframe
                                     className="w-full h-48 lg:h-64"
