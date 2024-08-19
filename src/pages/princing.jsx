@@ -78,8 +78,8 @@ export default function Pricing() {
     };
 
     return (
-        <section className='py-16 bg-gray-100 min-h-screen' id='Pricing'>
-            <div className='px-8 lg:px-32'>
+        <section className='py-16 bg-gray-100' id='Pricing'>
+            <div className='px-8 lg:px-32 flex flex-col'>
                 <motion.h2
                     className='text-2xl md:text-3xl lg:text-4xl text-red-500 font-bold text-center mb-8'
                     initial="hidden"
@@ -92,7 +92,7 @@ export default function Pricing() {
                     {pricingOptions.map((option, index) => (
                         <motion.div
                             key={index}
-                            className='bg-white p-6 rounded-lg shadow-md border border-red-500 text-center'
+                            className='bg-white p-6 rounded-lg shadow-md  text-center'
                             initial="hidden"
                             animate="visible"
                             variants={itemVariants}
@@ -105,62 +105,65 @@ export default function Pricing() {
                 </div>
 
                 <motion.div
-                    className='bg-white p-6 rounded-lg shadow-md border border-red-500'
+                    className='bg-white py-6 px-9 rounded-lg shadow-md '
                     initial="hidden"
                     animate="visible"
                     variants={itemVariants}
                 >
-                    <h3 className='text-xl font-bold text-red-500 mb-4 text-center'>Contactez-moi</h3>
+                    <h3 className='text-xl text-slate-700 mb-4 text-center text-menu'>Contactez-moi</h3>
                     <form onSubmit={handleSubmit}>
-                        <div className='mb-4'>
-                            <label htmlFor='name' className='block text-slate-700 mb-2'>Nom</label>
-                            <input
-                                type='text'
-                                id='name'
-                                name='name'
-                                value={formState.name}
-                                onChange={handleChange}
-                                className='w-full p-2 border border-gray-300 rounded'
-                                required
-                            />
+                        <div className='flex gap-8 h-full'>
+                            <div className='w-1/2 flex flex-col gap-4'>
+                                <div className='flex-grow'>
+                                    <label htmlFor='name' className='block text-slate-700 mb-2'>Nom</label>
+                                    <input
+                                        type='text'
+                                        id='name'
+                                        name='name'
+                                        value={formState.name}
+                                        onChange={handleChange}
+                                        className='w-full p-2 border border-gray-300 rounded'
+                                        required
+                                    />
+                                </div>
+                                <div className='flex-grow'>
+                                    <label htmlFor='email' className='block text-slate-700 mb-2'>Email</label>
+                                    <input
+                                        type='email'
+                                        id='email'
+                                        name='email'
+                                        value={formState.email}
+                                        onChange={handleChange}
+                                        className='w-full p-2 border border-gray-300 rounded'
+                                        required
+                                    />
+                                </div>
+                                <div className='flex-grow'>
+                                    <label htmlFor='subject' className='block text-slate-700 mb-2'>Objet</label>
+                                    <input
+                                        type='text'
+                                        id='subject'
+                                        name='subject'
+                                        value={formState.subject}
+                                        onChange={handleChange}
+                                        className='w-full p-2 border border-gray-300 rounded'
+                                        required
+                                    />
+                                </div>
+                            </div>
+                            <div className='w-1/2 flex flex-col'>
+                                <label htmlFor='message' className='block text-slate-700 mb-2'>Message</label>
+                                <textarea
+                                    id='message'
+                                    name='message'
+                                    value={formState.message}
+                                    onChange={handleChange}
+                                    className='w-full p-2 border border-gray-300 rounded flex-grow'
+                                    required
+                                />
+                            </div>
                         </div>
-                        <div className='mb-4'>
-                            <label htmlFor='email' className='block text-slate-700 mb-2'>Email</label>
-                            <input
-                                type='email'
-                                id='email'
-                                name='email'
-                                value={formState.email}
-                                onChange={handleChange}
-                                className='w-full p-2 border border-gray-300 rounded'
-                                required
-                            />
-                        </div>
-                        <div className='mb-4'>
-                            <label htmlFor='subject' className='block text-slate-700 mb-2'>Objet</label>
-                            <input
-                                type='text'
-                                id='subject'
-                                name='subject'
-                                value={formState.subject}
-                                onChange={handleChange}
-                                className='w-full p-2 border border-gray-300 rounded'
-                                required
-                            />
-                        </div>
-                        <div className='mb-4'>
-                            <label htmlFor='message' className='block text-slate-700 mb-2'>Message</label>
-                            <textarea
-                                id='message'
-                                name='message'
-                                value={formState.message}
-                                onChange={handleChange}
-                                className='w-full p-2 border border-gray-300 rounded'
-                                rows='4'
-                                required
-                            />
-                        </div>
-                        <div className='text-center'>
+                        <div className='text-center pt-9'>
                             <button
                                 type='submit'
                                 className='bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600'

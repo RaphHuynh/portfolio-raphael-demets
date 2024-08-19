@@ -63,16 +63,16 @@ export default function Home() {
             variants={fadeInOutVariants} 
         >
             <motion.article className='w-full mx-auto'>
-                <motion.h1 className='text-2xl md:text-3xl lg:text-4xl pb-6 text-red-500 font-bold' 
+                <motion.h1 className='text-2xl md:text-3xl lg:text-4xl pb-6 text-slate-700 font-bold' 
                     variants={itemVariants(0.2)}
                 >
                     Bonjour 👋, je suis Raphaël
                 </motion.h1>
-                <motion.h2 className='text-2xl text-red-400 italic pb-5' 
+                <motion.p className='text-2xl text-red-400 italic pb-5' 
                     variants={itemVariants(0.4)}
                 >
                     A la recherche d'un stage dans le domaine de la vfx et freelance
-                </motion.h2>
+                </motion.p>
 
                 <motion.div 
                     className='flex flex-wrap text-md lg:text-lg pb-8 gap-4 text-slate-600'
@@ -104,7 +104,7 @@ export default function Home() {
                         <motion.div 
                             key={index} 
                             className='p-6 rounded-lg flex flex-col items-center text-center h-full border border-red-500 bg-red-100 shadow-md transition-all'
-                            variants={itemVariants(0.6 + 0.2 * index)} // Délais incrémentés pour chaque élément
+                            variants={itemVariants(0.6 + 0.2 * index)}
                         >
                             <h3 className='text-xl font-bold text-red-500 mb-2'>{item.title}</h3>
                             <p className='text-slate-700'>{item.desc}</p>
@@ -113,7 +113,7 @@ export default function Home() {
                 </motion.div>
 
                 <section className='pb-8'>
-                    <motion.h2 className='text-2xl text-red-500 font-bold mb-6'
+                    <motion.h2 className='text-2xl text-slate-700 font-bold mb-6'
                         variants={itemVariants(1.2)}
                     >Mes meilleures réalisations</motion.h2>
                     <motion.div 

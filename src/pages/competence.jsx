@@ -27,7 +27,7 @@ export default function Competence() {
 
     return (
         <section className='min-h-screen w-full p-10 lg:px-32 flex flex-col justify-center' id="Competence">
-            <h1 className='text-3xl md:text-4xl lg:text-5xl text-red-500 font-bold mb-6'>
+            <h1 className='text-3xl md:text-4xl lg:text-5xl text-slate-700 mb-6'>
                 💻 Compétences
             </h1>
             <p className='text-lg text-slate-600 mb-12'>
@@ -39,11 +39,11 @@ export default function Competence() {
                         <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                             <div className='bg-red-500 text-white p-4 flex items-center justify-center'>
                                 {skill.icon}
-                                <h2 className='text-xl font-semibold ml-2'>{skill.title}</h2>
+                                <h2 className='text-xl ml-2'>{skill.title}</h2>
                             </div>
                             <div className='p-4'>
                                 {skill.items.map((item, itemIndex) => (
-                                    <span key={itemIndex} className="inline-block bg-red-100 text-red-700 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2 transition-colors duration-300 hover:bg-red-200">
+                                    <span key={itemIndex} className="inline-block bg-red-100 text-red-700 rounded-full px-3 py-1 text-sm mr-2 mb-2 transition-colors duration-300 hover:bg-red-200">
                                         {item}
                                     </span>
                                 ))}

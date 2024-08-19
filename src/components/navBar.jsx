@@ -30,7 +30,7 @@ export default function NavBar() {
                            href={item.id}
                            className="flex items-center text-zinc-600 hover:text-red-500 transition duration-300">
                             {item.icon}
-                            <span className="ml-2 hidden md:inline">{item.content}</span>
+                            <span className="ml-2 hidden md:inline text-menu">{item.content}</span>
                         </a>
                     ))}
                 </div>
