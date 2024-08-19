@@ -5,6 +5,13 @@ import Competence from './pages/competence';
 import Home from './pages/home';
 import Work from './pages/work';
 import Princing from './pages/princing';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Assurez-vous que le chemin correspond à votre configuration
+
+// Initialisez AOS
+AOS.init({
+  once: true,
+});
 
 function App() {
 

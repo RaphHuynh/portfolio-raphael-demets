@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const pricingOptions = [
     { duration: '8 min', price: '30€' },
@@ -9,19 +10,11 @@ const pricingOptions = [
     { duration: '20 min', price: '60€' },
 ];
 
-const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            duration: 0.6,
-            ease: "easeInOut"
-        }
-    }
-};
-
 export default function Pricing() {
+    useEffect(() => {
+        AOS.init({ duration: 1000 });
+    }, []);
+
     const [formState, setFormState] = useState({
         name: '',
         email: '',
@@ -80,35 +73,29 @@ export default function Pricing() {
     return (
         <section className='py-16 bg-gray-100' id='Pricing'>
             <div className='px-8 lg:px-32 flex flex-col'>
-                <motion.h2
+                <h2
                     className='text-2xl md:text-3xl lg:text-4xl text-red-500 font-bold text-center mb-8'
-                    initial="hidden"
-                    animate="visible"
-                    variants={itemVariants}
+                    data-aos="fade-up"
                 >
                     Tarifs de Montage Vidéo
-                </motion.h2>
+                </h2>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12'>
                     {pricingOptions.map((option, index) => (
-                        <motion.div
+                        <div
                             key={index}
                             className='bg-white p-6 rounded-lg shadow-md  text-center'
-                            initial="hidden"
-                            animate="visible"
-                            variants={itemVariants}
-                            style={{ transitionDelay: `${0.2 * index}s` }}
+                            data-aos="fade-up"
+                            data-aos-delay={`${index * 100}`}
                         >
                             <h3 className='text-xl font-bold text-red-500 mb-2'>{option.duration}</h3>
                             <p className='text-lg text-slate-700'>{option.price}</p>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
 
-                <motion.div
+                <div
                     className='bg-white py-6 px-9 rounded-lg shadow-md '
-                    initial="hidden"
-                    animate="visible"
-                    variants={itemVariants}
+                    data-aos="fade-up"
                 >
                     <h3 className='text-xl text-slate-700 mb-4 text-center text-menu'>Contactez-moi</h3>
                     <form onSubmit={handleSubmit}>
@@ -174,7 +161,7 @@ export default function Pricing() {
                         {formState.success && <p className='text-green-500 text-center mt-4'>Votre message a été envoyé avec succès !</p>}
                         {formState.error && <p className='text-red-500 text-center mt-4'>Veuillez remplir tous les champs.</p>}
                     </form>
-                </motion.div>
+                </div>
             </div>
         </section>
     );
