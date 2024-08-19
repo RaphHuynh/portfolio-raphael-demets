@@ -7,25 +7,29 @@ AOS.init();
 
 export default function Competence() {
     const skills = [
-        { 
-            title: "VFX", 
+        {
+            title: "VFX",
             icon: <FaDesktop />,
-            items: ["Houdini", "After Effect"]
+            items: ["Houdini", "After Effect"],
+            content: "Réalisation d'animations 3D et 2D."
         },
-        { 
-            title: "Graphisme", 
+        {
+            title: "Graphisme",
             icon: <FaPaintBrush />,
-            items: ["Illustrator", "Indesign", "Photoshop"]
+            items: ["Illustrator", "Indesign", "Photoshop"],
+            content: "Conceptions de miniatures, retouche d'images, réalisation de mises en page pour flyers et cartes de visite, création de logos ainsi que d'illustrations vectorielles. ",
         },
-        { 
-            title: "UI-UX", 
+        {
+            title: "UI-UX",
             icon: <FaPencilRuler />,
-            items: ["Adobe XD"]
+            items: ["Adobe XD"],
+            content: "Conception d'interfaces utilisateur."
         },
-        { 
-            title: "Montage Vidéo", 
+        {
+            title: "Montage Vidéo",
             icon: <FaVideo />,
-            items: ["Premiere Pro"]
+            items: ["Premiere Pro"],
+            content: "Montage de vidéos, dérushage et des ajustements audio. Motion design."
         }
     ];
 
@@ -40,8 +44,8 @@ export default function Competence() {
             <div className='grid gap-8 lg:grid-cols-2'>
                 <div className='grid gap-6 grid-cols-1 md:grid-cols-2'>
                     {skills.map((skill, index) => (
-                        <div 
-                            key={index} 
+                        <div
+                            key={index}
                             className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
                             data-aos="fade-up"
                             data-aos-delay={index * 100}
@@ -50,25 +54,30 @@ export default function Competence() {
                                 {skill.icon}
                                 <h2 className='text-xl ml-2'>{skill.title}</h2>
                             </div>
-                            <div className='p-4'>
-                                {skill.items.map((item, itemIndex) => (
-                                    <span 
-                                        key={itemIndex} 
-                                        className="inline-block bg-red-100 text-red-700 rounded-full px-3 py-1 text-sm mr-2 mb-2 transition-colors duration-300 hover:bg-red-200"
-                                        data-aos="fade-up"
-                                        data-aos-delay={itemIndex * 100}
-                                    >
-                                        {item}
-                                    </span>
-                                ))}
+                            <div className='p-6 flex flex-col flex-grow '>
+                                <p className=' text-slate-700'>
+                                    {skill.content}
+                                </p>
+                                <div className='fixed bottom-2'>
+                                    {skill.items.map((item, itemIndex) => (
+                                        <span
+                                            key={itemIndex}
+                                            className="inline-block bg-red-100 text-red-700 rounded-full px-3 py-1 text-sm mr-2 mb-2 transition-colors duration-300 hover:bg-red-200"
+                                            data-aos="fade-up"
+                                            data-aos-delay={itemIndex * 100}
+                                        >
+                                            {item}
+                                        </span>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     ))}
                 </div>
                 <div className='hidden lg:flex items-center justify-center'>
-                    <img 
-                        src={image} 
-                        alt="Illustration" 
+                    <img
+                        src={image}
+                        alt="Illustration"
                         className="max-w-full h-auto transition-all duration-300"
                         data-aos="fade-left"
                     />
