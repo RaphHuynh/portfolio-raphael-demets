@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaHome, FaLaptop, FaBriefcase } from 'react-icons/fa';
+import { AiFillEuroCircle } from "react-icons/ai";
 
 export default function NavBar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -16,6 +17,7 @@ export default function NavBar() {
         { id: "#Home", content: "Accueil", icon: <FaHome /> },
         { id: "#Competence", content: "Compétences", icon: <FaLaptop /> },
         { id: "#Work", content: "Réalisations", icon: <FaBriefcase /> },
+        { id: "#Pricing", content: "Tarifs", icon: <AiFillEuroCircle /> },
     ];
 
     return (
