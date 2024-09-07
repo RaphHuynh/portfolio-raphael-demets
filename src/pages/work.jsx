@@ -23,10 +23,10 @@ export default function Work() {
             ]
         },
         {
-            title: "VFX - Effets Spéciaux / Houdini - Personnel",
+            title: "Création 3D - Personnel",
             videos: [
-                { id:"092-JulXG2E", title: "Houdini - Simulation boule de feu" },
-                { id: "kabquFpWlX0", title: "Houdini - Entrainement flamme" }
+                { id:"092-JulXG2E", title: "VFX - Houdini - Simulation boule de feu" },
+                { id: "kabquFpWlX0", title: "VFX - Houdini - Entrainement flamme" }
             ]
         }
     ];

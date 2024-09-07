@@ -7,6 +7,8 @@ import Work from './pages/work';
 import Princing from './pages/princing';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Assurez-vous que le chemin correspond à votre configuration
+import { motion } from 'framer-motion';
+import AnimatedWaves from './components/waves';
 
 // Initialisez AOS
 AOS.init({
@@ -18,13 +20,14 @@ function App() {
   return (
     <>
       <div className='w-full'>
-      <NavBar/>
-      <Home/>
-      <Competence/>
-      <Work/>
-      <Princing/>
-      <NavLink/>
-    </div>
+        <AnimatedWaves />
+        <NavBar />
+        <Home />
+        <Competence />
+        <Work />
+        <Princing />
+        <NavLink />
+      </div>
     </>
   )
 }
