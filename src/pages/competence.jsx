@@ -34,7 +34,7 @@ export default function Competence() {
     ];
 
     return (
-        <section className='min-h-screen w-full p-10 lg:px-32 flex flex-col justify-center' id="Competence">
+        <section className='min-h-screen w-full p-10 lg:px-32 flex flex-col justify-center bg-red-50' id="Competence">
             <h1 className='text-3xl md:text-4xl lg:text-5xl text-slate-700 mb-6' data-aos="fade-up">
                 💻 Compétences
             </h1>
