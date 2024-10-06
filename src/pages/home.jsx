@@ -97,9 +97,8 @@ export default function Home() {
                 >
                     {[
                         { title: 'Étudiant', desc: 'Bac pro communication visuelle plurimédia' },
-                        { title: 'Monteur Vidéo', desc: 'Monteur Vidéo en Freelance' },
                         { title: 'Youtubeur', desc: 'Créateur de contenu passionné' },
-                        { title: 'Freelance', desc: 'Disponible pour des missions de montage vidéos et graphismes' },
+                        {'title': 'VFX artiste junior', 'desc': 'Junior en effets spéciaux'},
                     ].map((item, index) => (
                         <motion.div 
                             key={index} 

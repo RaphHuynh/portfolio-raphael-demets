@@ -4,10 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const pricingOptions = [
-    { duration: '8 min', price: '30€' },
-    { duration: '10 min', price: '40€' },
-    { duration: '16 min', price: '50€' },
-    { duration: '20 min', price: '60€' },
+    
 ];
 
 export default function Pricing() {
@@ -71,13 +68,13 @@ export default function Pricing() {
     };
 
     return (
-        <section className='py-16 bg-gray-100' id='Pricing'>
+        <section className='py-16 bg-gray-100' id='Contact'>
             <div className='px-8 lg:px-32 flex flex-col'>
                 <h2
                     className='text-2xl md:text-3xl lg:text-4xl text-red-500 font-bold text-center mb-8'
                     data-aos="fade-up"
                 >
-                    Tarifs de Montage Vidéo
+                    Contactez moi
                 </h2>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12'>
                     {pricingOptions.map((option, index) => (
@@ -97,12 +94,12 @@ export default function Pricing() {
                     className='bg-white py-6 px-9 rounded-lg shadow-md '
                     data-aos="fade-up"
                 >
-                    <h3 className='text-xl text-slate-700 mb-4 text-center text-menu'>Contactez-moi</h3>
+                    <h3 className='text-xl text-slate-700 mb-4 text-center text-menu'>Par mail</h3>
                     <form onSubmit={handleSubmit}>
                         <div className='flex gap-8 h-full'>
                             <div className='w-1/2 flex flex-col gap-4'>
                                 <div className='flex-grow'>
-                                    <label htmlFor='name' className='block text-slate-700 mb-2'>Nom</label>
+                                    <label htmlFor='name' className='block text-slate-700 mb-2 text-menu'>Nom</label>
                                     <input
                                         type='text'
                                         id='name'
@@ -114,7 +111,7 @@ export default function Pricing() {
                                     />
                                 </div>
                                 <div className='flex-grow'>
-                                    <label htmlFor='email' className='block text-slate-700 mb-2'>Email</label>
+                                    <label htmlFor='email' className='block text-slate-700 mb-2 text-menu'>Email</label>
                                     <input
                                         type='email'
                                         id='email'
@@ -126,7 +123,7 @@ export default function Pricing() {
                                     />
                                 </div>
                                 <div className='flex-grow'>
-                                    <label htmlFor='subject' className='block text-slate-700 mb-2'>Objet</label>
+                                    <label htmlFor='subject' className='block text-slate-700 mb-2 text-menu'>Objet</label>
                                     <input
                                         type='text'
                                         id='subject'
@@ -139,7 +136,7 @@ export default function Pricing() {
                                 </div>
                             </div>
                             <div className='w-1/2 flex flex-col'>
-                                <label htmlFor='message' className='block text-slate-700 mb-2'>Message</label>
+                                <label htmlFor='message' className='block text-slate-700 mb-2 text-menu'>Message</label>
                                 <textarea
                                     id='message'
                                     name='message'

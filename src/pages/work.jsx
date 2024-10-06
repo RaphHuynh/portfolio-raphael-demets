@@ -26,7 +26,9 @@ export default function Work() {
             title: "Création 3D - Personnel",
             videos: [
                 { id:"092-JulXG2E", title: "VFX - Houdini - Simulation boule de feu" },
-                { id: "kabquFpWlX0", title: "VFX - Houdini - Entrainement flamme" }
+                { id:"kabquFpWlX0", title: "VFX - Houdini - Entrainement flamme" },
+                { id:"ITbDp0cFZrE", title: "VFX - Houdini - Fireball FX entrainement" },
+                { id:"vEqbt53x784", title: "VFX - Houdini - Modélisation Knife animation" }
             ]
         }
     ];

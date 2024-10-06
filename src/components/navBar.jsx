@@ -17,7 +17,7 @@ export default function NavBar() {
         { id: "#Home", content: "Accueil", icon: <FaHome /> },
         { id: "#Competence", content: "Compétences", icon: <FaLaptop /> },
         { id: "#Work", content: "Réalisations", icon: <FaBriefcase /> },
-        { id: "#Pricing", content: "Tarifs", icon: <AiFillEuroCircle /> },
+        { id: "#Contact", content: "Contact", icon: <AiFillEuroCircle /> },
     ];
 
     return (
