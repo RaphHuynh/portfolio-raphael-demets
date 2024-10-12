@@ -28,7 +28,8 @@ export default function Work() {
                 { id:"092-JulXG2E", title: "VFX - Houdini - Simulation boule de feu" },
                 { id:"kabquFpWlX0", title: "VFX - Houdini - Entrainement flamme" },
                 { id:"ITbDp0cFZrE", title: "VFX - Houdini - Fireball FX entrainement" },
-                { id:"vEqbt53x784", title: "VFX - Houdini - Modélisation Knife animation" }
+                { id:"vEqbt53x784", title: "VFX - Houdini - Modélisation Knife animation" },
+                { id:"EMyhqDN34Ls", title: "VFX - breakdown voyage temporel" },
             ]
         }
     ];
