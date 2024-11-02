@@ -30,6 +30,7 @@ export default function Work() {
                 { id:"ITbDp0cFZrE", title: "VFX - Houdini - Fireball FX entrainement" },
                 { id:"vEqbt53x784", title: "VFX - Houdini - Modélisation Knife animation" },
                 { id:"EMyhqDN34Ls", title: "VFX - Breakdown voyage temporel" },
+                { id:"Mf9qhmqr4-Q", title: "VFX - Houdini - Feux de camps Houpuzzle" },
             ]
         }
     ];
