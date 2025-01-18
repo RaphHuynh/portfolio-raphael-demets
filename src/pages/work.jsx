@@ -31,6 +31,7 @@ export default function Work() {
                 { id:"vEqbt53x784", title: "VFX - Houdini - Modélisation Knife animation" },
                 { id:"EMyhqDN34Ls", title: "VFX - Breakdown voyage temporel" },
                 { id:"Mf9qhmqr4-Q", title: "VFX - Houdini - Feux de camps Houpuzzle" },
+                { id:"hlCp1J7FdOg", title: "VFX - Houdini - Skull rendu 150F" },
             ]
         }
     ];

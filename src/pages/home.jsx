@@ -16,8 +16,8 @@ const firstProjects = [
     },
     {
         title: "VFX - Effets Spéciaux / Houdini - Personnel",
-        videoId: "092-JulXG2E",
-        videoTitle: "Houdini - Simulation boule de feu"
+        videoId: "hlCp1J7FdOg",
+        videoTitle: "Houdini - Skull rendu 150F"
     }
 ];
 
