@@ -10,9 +10,9 @@ const firstProjects = [
         videoTitle: "C'est quoi une fractale ?"
     },
     {
-        title: "IM SAMA - Montage Vidéo / Ecriture / Voix / Miniamaker - Chaine Personnelle",
-        videoId: "3nWXWj4TjTw",
-        videoTitle: "Les HAKI, Fruits du demon"
+        title: "VFX - Effets Spéciaux / Houdini - Personnel",
+        videoId: "EMyhqDN34Ls",
+        videoTitle: "Houdini - Breakdown voyage temporel"
     },
     {
         title: "VFX - Effets Spéciaux / Houdini - Personnel",
